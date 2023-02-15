@@ -2,6 +2,10 @@ package br.com.nutrition.model;
 import java.time.LocalDate;
 import javax.persistence.*;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 @Entity
 public class Nutricionista {
 	
@@ -17,7 +21,7 @@ public class Nutricionista {
 	private Long idPaciente;
 	
 	
-public Nutricionista(String nome, LocalDate idade, String codigoRegistro, Long id_paciente) {
+public Nutricionista(String nome, LocalDate idade, String codigoRegistro, Long idPaciente) {
 	this.nome = nome;
 	this.idade = idade;
 	this.codigoRegistro = codigoRegistro;

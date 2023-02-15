@@ -12,7 +12,7 @@ public class CadastroNutricionista {
 	
 	@GetMapping (path = "id_paciente")
 	public void buscarPorId() {
-		nutricionistaRepository.
+		nutricionistaRepository.findById(1L);
 	}
 	
 }
