@@ -2,6 +2,10 @@ package br.com.nutrition.datasource.model;
 import java.time.LocalDate;
 import javax.persistence.*;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 @Entity(name = "nutricionista")
 public class Nutricionista {
 	
