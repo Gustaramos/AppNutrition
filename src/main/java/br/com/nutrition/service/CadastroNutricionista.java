@@ -12,6 +12,8 @@ public class CadastroNutricionista {
 	@Autowired
 	private NutricionistaRepository nutricionistaRepository;
 	
+	
+	//salvar o cadastro do nutricionista no servidor
 	public void cadastro(Nutricionista nutricionista) {
 		nutricionistaRepository.saveAndFlush(nutricionista);
 		

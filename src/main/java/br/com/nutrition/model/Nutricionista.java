@@ -1,4 +1,5 @@
 package br.com.nutrition.model;
+import java.io.Serializable;
 import java.time.LocalDate;
 import javax.persistence.*;
 
@@ -7,9 +8,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Nutricionista {
-	
+@Table(name = "nutricionista")
+public class Nutricionista implements Serializable{
+
+	private static final long serialVersionUID = 2638887198670244578L;
+
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String nome;
 	private LocalDate idade;
@@ -21,15 +26,7 @@ public class Nutricionista {
 	private Long idPaciente;
 	
 	
-public Nutricionista(String nome, LocalDate idade, String codigoRegistro, Long idPaciente) {
-	this.nome = nome;
-	this.idade = idade;
-	this.codigoRegistro = codigoRegistro;
-	this.idPaciente = idPaciente;
-	}
-
-	@SuppressWarnings("unused")
-	private Nutricionista() {
+	public Nutricionista() {
 	}
 	
 	public String getNome() {
